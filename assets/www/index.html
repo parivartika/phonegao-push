@@ -248,7 +248,32 @@
 			
 
          </script> -->
-		<div id="home">
+        
+        
+        <script type="text/javascript">
+            function change_page(){
+            	var urlHome="home.html";
+                location=urlHome;
+            }
+            
+            function logout_page(){
+            	var gcm_regid= window.localStorage["regID"];
+            	
+            	$.ajax({
+                       url: 'http://10.0.2.2/gcm_server_php/delete_regid.php', //This is the current doc
+                       type: "POST",
+                       data: {regId: gcm_regid},
+                       success: function(data){
+                       console.log(data);
+                       }
+                       
+                       });
+            	window.localStorage.removeItem("notification");
+            	window.localStorage.removeItem("regID");
+            	
+            }
+            </script>
+            <div id="home">
 			<div id="app-status-div">
 				<ul id="app-status-ul">
 					<li>Cordova PushNotification Plugin Demo</li>
