@@ -16,12 +16,9 @@
             var pushNotification;
             
             
-            
+       
             function onDeviceReady() {
-            if(localStorage.getItem("appexit") == 'COMPLETE'){
-            		window.location='./home.html';
-            		return;
-            	} 
+            
            // alert("ondevice functio running");
             	if(localStorage.getItem("notification") == null){
             	confirm_notification();	
@@ -253,6 +250,18 @@
   
   </head>
   <body>
+      
   WELCOME TO HOME PAGE
+      
+      <div id="home">
+          <div id="app-status-div">
+              <ul id="app-status-ul">
+                  <li>Cordova PushNotification Plugin Demo</li>
+                  <input type="button" name="submit" value="submit" onclick="change_page();">
+                      <input type="button" name="logout" value="logout" onclick="logout_page();">
+                          </ul>
+          </div>
+          <div id="testdisplay">
+          </div>
   </body>
   </html>
