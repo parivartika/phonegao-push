@@ -149,7 +149,7 @@
 						window.localStorage["regID"]= e.regid;
 						
 						 $.ajax({
-                       url: 'http://10.0.2.2/gcm_server_php/register.php', //This is the current doc
+                       url: 'http://192.168.1.7/gcm_server_php/register.php', //This is the current doc
                        type: "POST",
                        data: {name: "abhi", email: "notification@eclipseregid11111", regId: e.regid},
                        success: function(data){
@@ -228,7 +228,7 @@
             	var gcm_regid= window.localStorage["regID"];
             	
             	$.ajax({
-                    url: 'http://10.0.2.2/gcm_server_php/delete_regid.php', //This is the current doc
+                    url: 'http://192.168.1.7/gcm_server_php/delete_regid.php', //This is the current doc
                     type: "POST",
                     data: {regId: gcm_regid},
                     success: function(data){
